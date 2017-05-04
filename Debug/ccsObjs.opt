@@ -1,0 +1,1 @@
+"./hal_SPI.obj" "./main.obj" "./mmc.obj" "../lnk_cc430f6137.cmd" -llibmath.a -llibc.a 
