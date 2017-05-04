@@ -1,10 +1,10 @@
 ******************************************************************************
                   MSP430 Linker PC v16.9.0                     
 ******************************************************************************
->> Linked Thu May 04 12:01:23 2017
+>> Linked Thu May 04 12:34:07 2017
 
 OUTPUT FILE NAME:   <SDCARD.out>
-ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 00008a2e
+ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 00008a38
 
 
 MEMORY CONFIGURATION
@@ -19,7 +19,7 @@ MEMORY CONFIGURATION
   INFOB                 00001900   00000080  00000000  00000080  RWIX
   INFOA                 00001980   00000080  00000000  00000080  RWIX
   RAM                   00001c00   00000ffe  0000025b  00000da3  RWIX
-  FLASH                 00008000   00007f80  00000ad8  000074a8  RWIX
+  FLASH                 00008000   00007f80  00000ae2  0000749e  RWIX
   INT00                 0000ff80   00000002  00000000  00000002  RWIX
   INT01                 0000ff82   00000002  00000000  00000002  RWIX
   INT02                 0000ff84   00000002  00000000  00000002  RWIX
@@ -102,7 +102,7 @@ section   page    origin      length       input sections
                   00002bac    00000002     rts430x_lc_sd_eabi.lib : boot.obj (.stack)
                   00002bae    0000004e     --HOLE--
 
-.text      0    00008000    00000aaa     
+.text      0    00008000    00000ab4     
                   00008000    00000250     main.obj (.text:main)
                   00008250    00000124     mmc.obj (.text:mmcReadCardSize)
                   00008374    000000ee     rts430x_lc_sd_eabi.lib : copy_decompress_lzss.obj (.text:decompress:lzss:__TI_decompress_lzss)
@@ -115,34 +115,34 @@ section   page    origin      length       input sections
                   00008752    0000004a     mmc.obj (.text:mmcSendCmd)
                   0000879c    0000004a     mmc.obj (.text:mmcSetBlockLength)
                   000087e6    00000048     mmc.obj (.text:mmcInit)
-                  0000882e    00000040     rts430x_lc_sd_eabi.lib : cpy_util.obj (.text:__memcpy_far)
-                  0000886e    0000003e                            : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
-                  000088ac    0000003e                            : lsl32.obj (.text:l_lsl_const)
-                  000088ea    0000003c                            : copy_decompress_none.obj (.text:decompress:none:__TI_decompress_none)
-                  00008926    0000003a     hal_SPI.obj (.text:spi_bitbang_inout)
-                  00008960    00000034     hal_SPI.obj (.text:spiSendFrame)
-                  00008994    00000030     hal_SPI.obj (.text:spiReadFrame)
-                  000089c4    00000024     mmc.obj (.text:mmcGetResponse)
-                  000089e8    00000024     rts430x_lc_sd_eabi.lib : mult32_f5hw.obj (.text)
-                  00008a0c    00000022     mmc.obj (.text:mmcGetXXResponse)
-                  00008a2e    0000001a     rts430x_lc_sd_eabi.lib : boot_special.obj (.text:_isr:_c_int00_noargs_noexit)
-                  00008a48    00000018                            : mult16_f5hw.obj (.text)
-                  00008a60    00000012                            : memcpy.obj (.text:memcpy)
-                  00008a72    00000010                            : lsr32.obj (.text:l_lsr)
-                  00008a82    0000000a     hal_SPI.obj (.text:spiSendByte)
-                  00008a8c    00000008     rts430x_lc_sd_eabi.lib : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
-                  00008a94    00000008     mmc.obj (.text:mmcPing)
-                  00008a9c    00000006     rts430x_lc_sd_eabi.lib : exit.obj (.text:abort)
-                  00008aa2    00000004                            : pre_init.obj (.text:_system_pre_init)
-                  00008aa6    00000002                            : startup.obj (.text:_system_post_cinit)
-                  00008aa8    00000002     hal_SPI.obj (.text:halSPISetup)
+                  0000882e    00000044     hal_SPI.obj (.text:spi_bitbang_inout)
+                  00008872    00000040     rts430x_lc_sd_eabi.lib : cpy_util.obj (.text:__memcpy_far)
+                  000088b2    0000003e                            : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
+                  000088f0    0000003e                            : lsl32.obj (.text:l_lsl_const)
+                  0000892e    0000003c                            : copy_decompress_none.obj (.text:decompress:none:__TI_decompress_none)
+                  0000896a    00000034     hal_SPI.obj (.text:spiSendFrame)
+                  0000899e    00000030     hal_SPI.obj (.text:spiReadFrame)
+                  000089ce    00000024     mmc.obj (.text:mmcGetResponse)
+                  000089f2    00000024     rts430x_lc_sd_eabi.lib : mult32_f5hw.obj (.text)
+                  00008a16    00000022     mmc.obj (.text:mmcGetXXResponse)
+                  00008a38    0000001a     rts430x_lc_sd_eabi.lib : boot_special.obj (.text:_isr:_c_int00_noargs_noexit)
+                  00008a52    00000018                            : mult16_f5hw.obj (.text)
+                  00008a6a    00000012                            : memcpy.obj (.text:memcpy)
+                  00008a7c    00000010                            : lsr32.obj (.text:l_lsr)
+                  00008a8c    0000000a     hal_SPI.obj (.text:spiSendByte)
+                  00008a96    00000008     rts430x_lc_sd_eabi.lib : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
+                  00008a9e    00000008     mmc.obj (.text:mmcPing)
+                  00008aa6    00000006     rts430x_lc_sd_eabi.lib : exit.obj (.text:abort)
+                  00008aac    00000004                            : pre_init.obj (.text:_system_pre_init)
+                  00008ab0    00000002                            : startup.obj (.text:_system_post_cinit)
+                  00008ab2    00000002     hal_SPI.obj (.text:halSPISetup)
 
-.cinit     0    00008aaa    0000002e     
-                  00008aaa    0000000c     (__TI_handler_table)
-                  00008ab6    0000000b     (.cinit..data.load) [load image, compression = lzss]
-                  00008ac1    00000001     --HOLE-- [fill = 0]
-                  00008ac2    00000006     (.cinit..bss.load) [load image, compression = zero_init]
-                  00008ac8    00000010     (__TI_cinit_table)
+.cinit     0    00008ab4    0000002e     
+                  00008ab4    0000000c     (__TI_handler_table)
+                  00008ac0    0000000b     (.cinit..data.load) [load image, compression = lzss]
+                  00008acb    00000001     --HOLE-- [fill = 0]
+                  00008acc    00000006     (.cinit..bss.load) [load image, compression = zero_init]
+                  00008ad2    00000010     (__TI_cinit_table)
 
 .binit     0    00008000    00000000     
 
@@ -217,9 +217,9 @@ MODULE SUMMARY
     .\
        main.obj                   592    0         522    
        mmc.obj                    1014   0         0      
-       hal_SPI.obj                170    0         1      
+       hal_SPI.obj                180    0         1      
     +--+--------------------------+------+---------+---------+
-       Total:                     1776   0         523    
+       Total:                     1786   0         523    
                                                           
     C:\ti\ccs700\ccsv7\tools\compiler\ti-cgt-msp430_16.9.0.LTS\lib\rts430x_lc_sd_eabi.lib
        copy_decompress_lzss.obj   238    0         0      
@@ -263,19 +263,19 @@ MODULE SUMMARY
        Stack:                     0      0         80     
        Linker Generated:          0      45        0      
     +--+--------------------------+------+---------+---------+
-       Grand Total:               2730   83        603    
+       Grand Total:               2740   83        603    
 
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 00008ac8 records: 2, size/record: 8, table size: 16
-	.data: load addr=00008ab6, load size=0000000b bytes, run addr=00001e02, run size=0000000a bytes, compression=lzss
-	.bss: load addr=00008ac2, load size=00000006 bytes, run addr=00001c00, run size=00000201 bytes, compression=zero_init
+__TI_cinit_table @ 00008ad2 records: 2, size/record: 8, table size: 16
+	.data: load addr=00008ac0, load size=0000000b bytes, run addr=00001e02, run size=0000000a bytes, compression=lzss
+	.bss: load addr=00008acc, load size=00000006 bytes, run addr=00001c00, run size=00000201 bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 00008aaa records: 3, size/record: 4, table size: 12
+__TI_handler_table @ 00008ab4 records: 3, size/record: 4, table size: 12
 	index: 0, handler: __TI_zero_init
 	index: 1, handler: __TI_decompress_lzss
 	index: 2, handler: __TI_decompress_none
@@ -382,7 +382,7 @@ address   name
 000009c4  AESASTAT                
 000009c5  AESASTAT_H              
 000009c4  AESASTAT_L              
-00008a9c  C$$EXIT                 
+00008aa6  C$$EXIT                 
 000008c0  CBCTL0                  
 000008c1  CBCTL0_H                
 000008c0  CBCTL0_L                
@@ -999,15 +999,15 @@ address   name
 00000050  __STACK_SIZE            
 UNDEFED   __TI_BINIT_Base         
 UNDEFED   __TI_BINIT_Limit        
-00008ac8  __TI_CINIT_Base         
-00008ad8  __TI_CINIT_Limit        
-00008aaa  __TI_Handler_Table_Base 
-00008ab6  __TI_Handler_Table_Limit
+00008ad2  __TI_CINIT_Base         
+00008ae2  __TI_CINIT_Limit        
+00008ab4  __TI_Handler_Table_Base 
+00008ac0  __TI_Handler_Table_Limit
 UNDEFED   __TI_INITARRAY_Base     
 UNDEFED   __TI_INITARRAY_Limit    
-00008a8c  __TI_ISR_TRAP           
+00008a96  __TI_ISR_TRAP           
 00008374  __TI_decompress_lzss    
-000088ea  __TI_decompress_none    
+0000892e  __TI_decompress_none    
 0000ffda  __TI_int45              
 0000ffdc  __TI_int46              
 0000ffde  __TI_int47              
@@ -1029,57 +1029,57 @@ UNDEFED   __TI_INITARRAY_Limit
 ffffffff  __TI_pprof_out_hndl     
 ffffffff  __TI_prof_data_size     
 ffffffff  __TI_prof_data_start    
-0000886e  __TI_zero_init          
+000088b2  __TI_zero_init          
 ffffffff  __c_args__              
-0000882e  __memcpy_far            
-00008a48  __mspabi_mpyi_f5hw      
-000089e8  __mspabi_mpyl_f5hw      
-000088e4  __mspabi_slll_1         
-000088c0  __mspabi_slll_10        
-000088bc  __mspabi_slll_11        
-000088b8  __mspabi_slll_12        
-000088b4  __mspabi_slll_13        
-000088b0  __mspabi_slll_14        
-000088ac  __mspabi_slll_15        
-000088e0  __mspabi_slll_2         
-000088dc  __mspabi_slll_3         
-000088d8  __mspabi_slll_4         
-000088d4  __mspabi_slll_5         
-000088d0  __mspabi_slll_6         
-000088cc  __mspabi_slll_7         
-000088c8  __mspabi_slll_8         
-000088c4  __mspabi_slll_9         
-00008a72  __mspabi_srll           
+00008872  __memcpy_far            
+00008a52  __mspabi_mpyi_f5hw      
+000089f2  __mspabi_mpyl_f5hw      
+00008928  __mspabi_slll_1         
+00008904  __mspabi_slll_10        
+00008900  __mspabi_slll_11        
+000088fc  __mspabi_slll_12        
+000088f8  __mspabi_slll_13        
+000088f4  __mspabi_slll_14        
+000088f0  __mspabi_slll_15        
+00008924  __mspabi_slll_2         
+00008920  __mspabi_slll_3         
+0000891c  __mspabi_slll_4         
+00008918  __mspabi_slll_5         
+00008914  __mspabi_slll_6         
+00008910  __mspabi_slll_7         
+0000890c  __mspabi_slll_8         
+00008908  __mspabi_slll_9         
+00008a7c  __mspabi_srll           
 00008514  _auto_init_hold_wdt     
-00008a2e  _c_int00_noargs_noexit  
+00008a38  _c_int00_noargs_noexit  
 0000fffe  _reset_vector           
 00002bac  _stack                  
-00008aa6  _system_post_cinit      
-00008aa2  _system_pre_init        
-00008a9c  abort                   
+00008ab0  _system_post_cinit      
+00008aac  _system_pre_init        
+00008aa6  abort                   
 00001c00  buffer                  
 00001e02  cardSize                
 00008462  copy_in                 
-00008aa8  halSPISetup             
+00008ab2  halSPISetup             
 00001e0a  i                       
 00008000  main                    
-00008a60  memcpy                  
+00008a6a  memcpy                  
 000086fe  mmcCheckBusy            
-000089c4  mmcGetResponse          
-00008a0c  mmcGetXXResponse        
+000089ce  mmcGetResponse          
+00008a16  mmcGetXXResponse        
 0000869a  mmcGoIdle               
 000087e6  mmcInit                 
-00008a94  mmcPing                 
+00008a9e  mmcPing                 
 000085aa  mmcReadBlock            
 00008250  mmcReadCardSize         
 00008752  mmcSendCmd              
 0000879c  mmcSetBlockLength       
 00008622  mmcWriteBlock           
-00008994  spiReadFrame            
-00008a82  spiSendByte             
-00008960  spiSendFrame            
+0000899e  spiReadFrame            
+00008a8c  spiSendByte             
+0000896a  spiSendFrame            
 00001e00  spi_bitbang_in_data     
-00008926  spi_bitbang_inout       
+0000882e  spi_bitbang_inout       
 00001e06  status                  
 00001e08  timeout                 
 
@@ -1818,46 +1818,46 @@ address   name
 00008752  mmcSendCmd              
 0000879c  mmcSetBlockLength       
 000087e6  mmcInit                 
-0000882e  __memcpy_far            
-0000886e  __TI_zero_init          
-000088ac  __mspabi_slll_15        
-000088b0  __mspabi_slll_14        
-000088b4  __mspabi_slll_13        
-000088b8  __mspabi_slll_12        
-000088bc  __mspabi_slll_11        
-000088c0  __mspabi_slll_10        
-000088c4  __mspabi_slll_9         
-000088c8  __mspabi_slll_8         
-000088cc  __mspabi_slll_7         
-000088d0  __mspabi_slll_6         
-000088d4  __mspabi_slll_5         
-000088d8  __mspabi_slll_4         
-000088dc  __mspabi_slll_3         
-000088e0  __mspabi_slll_2         
-000088e4  __mspabi_slll_1         
-000088ea  __TI_decompress_none    
-00008926  spi_bitbang_inout       
-00008960  spiSendFrame            
-00008994  spiReadFrame            
-000089c4  mmcGetResponse          
-000089e8  __mspabi_mpyl_f5hw      
-00008a0c  mmcGetXXResponse        
-00008a2e  _c_int00_noargs_noexit  
-00008a48  __mspabi_mpyi_f5hw      
-00008a60  memcpy                  
-00008a72  __mspabi_srll           
-00008a82  spiSendByte             
-00008a8c  __TI_ISR_TRAP           
-00008a94  mmcPing                 
-00008a9c  C$$EXIT                 
-00008a9c  abort                   
-00008aa2  _system_pre_init        
-00008aa6  _system_post_cinit      
-00008aa8  halSPISetup             
-00008aaa  __TI_Handler_Table_Base 
-00008ab6  __TI_Handler_Table_Limit
-00008ac8  __TI_CINIT_Base         
-00008ad8  __TI_CINIT_Limit        
+0000882e  spi_bitbang_inout       
+00008872  __memcpy_far            
+000088b2  __TI_zero_init          
+000088f0  __mspabi_slll_15        
+000088f4  __mspabi_slll_14        
+000088f8  __mspabi_slll_13        
+000088fc  __mspabi_slll_12        
+00008900  __mspabi_slll_11        
+00008904  __mspabi_slll_10        
+00008908  __mspabi_slll_9         
+0000890c  __mspabi_slll_8         
+00008910  __mspabi_slll_7         
+00008914  __mspabi_slll_6         
+00008918  __mspabi_slll_5         
+0000891c  __mspabi_slll_4         
+00008920  __mspabi_slll_3         
+00008924  __mspabi_slll_2         
+00008928  __mspabi_slll_1         
+0000892e  __TI_decompress_none    
+0000896a  spiSendFrame            
+0000899e  spiReadFrame            
+000089ce  mmcGetResponse          
+000089f2  __mspabi_mpyl_f5hw      
+00008a16  mmcGetXXResponse        
+00008a38  _c_int00_noargs_noexit  
+00008a52  __mspabi_mpyi_f5hw      
+00008a6a  memcpy                  
+00008a7c  __mspabi_srll           
+00008a8c  spiSendByte             
+00008a96  __TI_ISR_TRAP           
+00008a9e  mmcPing                 
+00008aa6  C$$EXIT                 
+00008aa6  abort                   
+00008aac  _system_pre_init        
+00008ab0  _system_post_cinit      
+00008ab2  halSPISetup             
+00008ab4  __TI_Handler_Table_Base 
+00008ac0  __TI_Handler_Table_Limit
+00008ad2  __TI_CINIT_Base         
+00008ae2  __TI_CINIT_Limit        
 0000ffda  __TI_int45              
 0000ffdc  __TI_int46              
 0000ffde  __TI_int47              
